@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { companies, testimonials } from "@/data";
+import { companies, testimonials, contact } from "@/data";
 import { InfiniteMovingCards } from "./ui/InfiniteCards";
 import { Timeline } from "./ui/timeline";
 import Image from "next/image";
@@ -10,65 +10,37 @@ import Image from "next/image";
 const TimeLine = () => {
   const data = [
     {
-      title: "2024",
+      title: process.env.NEXT_PUBLIC_GRADUATION_YEAR || "2026",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-xl mb-8">
-            Worked as Frontend Engineer at a SaaS Based startup iDesign.Market
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-xl mb-4">
+            {contact.fullName || "Your Name"} — {process.env.NEXT_PUBLIC_DEGREE || "Degree"}
           </p>
-          <p>
-            Engineered a comprehensive Minutes of Meeting feature, incorporating
-            sharing, PDF downloads, drafting, editing, and attachment options;
-            boosted team collaboration efficiency by 40% and reduced
-            administrative workload by 25%
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm mb-4">
+            {process.env.NEXT_PUBLIC_UNIVERSITY || "University"} — CGPA: {process.env.NEXT_PUBLIC_CGPA || "-"}
           </p>
-          <p className="py-4">
-            Reduced client manual efforts by 40% through the simplification of
-            meeting documentation processes.
+          <p className="py-2">
+            {process.env.NEXT_PUBLIC_ACHIEVEMENT_3 || "Published work / chapter"}
           </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="/iDesign.png"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/iDesign2.png"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
         </div>
       ),
     },
     {
-      title: "Late 2023",
+      title: "Recent",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-xl font-normal mb-8">
-            Worked as a Software Developer Intern @ Shivam Projection
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-xl font-normal mb-4">
+            {process.env.NEXT_PUBLIC_TAGLINE || "Full-Stack Developer"}
           </p>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Developed an admin panel that reduced client request approval time
-            by 40%
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm mb-4">
+            {process.env.NEXT_PUBLIC_HERO_DESCRIPTION || "Short professional summary goes here."}
           </p>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Developed 10+ high-performance RESTful APIs using Express.js,
-            handling 100% of user authentication, event listings, and automated
-            email notifications, improving system efficiency by 30%.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="/shivam.png"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
+          <div className="mb-4">
+            <ul className="list-disc pl-5 space-y-2 text-sm">
+              {process.env.NEXT_PUBLIC_ACHIEVEMENT_1 && <li>{process.env.NEXT_PUBLIC_ACHIEVEMENT_1}</li>}
+              {process.env.NEXT_PUBLIC_ACHIEVEMENT_2 && <li>{process.env.NEXT_PUBLIC_ACHIEVEMENT_2}</li>}
+              {process.env.NEXT_PUBLIC_ACHIEVEMENT_4 && <li>{process.env.NEXT_PUBLIC_ACHIEVEMENT_4}</li>}
+            </ul>
           </div>
         </div>
       ),
@@ -78,30 +50,11 @@ const TimeLine = () => {
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-xl font-normal mb-4">
-            Worked with more than 5 online and offline clients
+            Worked with multiple online and offline clients
           </p>
           <p>
-            I've been working as a freelancer since Nov'22. As a freelancer, I
-            have the flexibility to choose my own clients and projects, which
-            allows me to work on things that I am passionate about.
+            As a freelancer since 2022, I take on projects across web development, AI integrations and system design — delivering production-ready solutions.
           </p>
-          <div className="mb-8"></div>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="/reclaim.png"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/adest.png"
-              alt="cards template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
         </div>
       ),
     },

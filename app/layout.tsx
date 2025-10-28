@@ -7,8 +7,11 @@ import { ThemeProvider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Aman's Portfolio",
-  description: "Aman Pathak Portfolio",
+  title: `${process.env.NEXT_PUBLIC_FULL_NAME ?? "Your Name"} — Portfolio`,
+  description:
+    process.env.NEXT_PUBLIC_TAGLINE ??
+    process.env.NEXT_PUBLIC_HERO_DESCRIPTION ??
+    "Personal portfolio showcasing projects and experience",
 };
 
 export default function RootLayout({

@@ -1,13 +1,12 @@
 import { FaLocationArrow } from "react-icons/fa6";
 
-import { socialMedia } from "@/data";
+import { socialMedia, contact } from "@/data";
 import MagicButton from "./MagicButton";
 
 const Footer = () => {
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
-      {/* background grid */}
-      <div className="w-full absolute left-0 -bottom-72 min-h-96">
+      <div className="w-full absolute left-0 -bottom-72 min-h-96 -z-10 pointer-events-none">
         <img
           src="/footer-grid.svg"
           alt="grid"
@@ -17,14 +16,12 @@ const Footer = () => {
 
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
-          presence to the next level?
+          Ready to bring <span className="text-purple">your ideas</span> to life with cutting-edge technology?
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
+          Let&apos;s connect and discuss how I can help you build amazing full-stack applications with MERN, Next.js, and AI integration.
         </p>
-        <a href="mailto:amanasstudent@gmail.com">
+        <a href={`mailto:${contact.email}`}>
           <MagicButton
             title="Let's get in touch"
             icon={<FaLocationArrow />}
@@ -32,17 +29,23 @@ const Footer = () => {
           />
         </a>
       </div>
-      <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
+
+      <div className="flex mt-16 md:flex-row flex-col justify-between items-center max-w-6xl mx-auto w-full px-6">
         <p className="md:text-base text-sm md:font-normal font-light">
-          Made with love, by Aman Ap
+          Copyright (c) {new Date().getFullYear()} {contact.fullName || "Your Name"}. All rights reserved.
         </p>
 
-        <div className="flex items-center md:gap-3 gap-6">
-          {socialMedia.map((info) => (
-            <a target="_blank" key={info.id} href={info?.link}>
-              <div className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
-                <img src={info.img} alt="icons" width={20} height={20} />
-              </div>
+        <div className="flex gap-4 items-center">
+          {socialMedia.map((s) => (
+            <a
+              key={s.id}
+              href={s.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={s.link}
+              className="inline-block"
+            >
+              <img src={s.img} alt={`social-${s.id}`} className="w-6 h-6" />
             </a>
           ))}
         </div>
