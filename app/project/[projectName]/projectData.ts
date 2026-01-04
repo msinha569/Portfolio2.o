@@ -8,7 +8,7 @@ export const projectData = {
       "https://github.com/msinha569/linkedin-clone",
     live:
       process.env.NEXT_PUBLIC_LINKEDIN_CLONE_URL ||
-      "https://unlinkedd.mksinha.me/",
+      "https://unlinked.mksinha.me/",
     techStack: [
       "React",
       "Node.js",

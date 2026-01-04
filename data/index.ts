@@ -81,7 +81,7 @@ export const projects = [
     des: "Full-featured social networking platform with MERN stack, featuring advanced authentication, real-time notifications, and responsive design.",
     img: "/linkedin-clone.png",
     iconLists: ["/re.svg", "/node.svg", "/mongo.svg", "/tail.svg"],
-    link: "https://unlinkedd.mksinha.me/",
+    link: "https://unlinked.mksinha.me/",
   },
   {
     id: 2,
