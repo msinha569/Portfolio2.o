@@ -81,7 +81,7 @@ export const projects = [
     des: "Full-featured social networking platform with MERN stack, featuring advanced authentication, real-time notifications, and responsive design.",
     img: "/linkedin-clone.png",
     iconLists: ["/re.svg", "/node.svg", "/mongo.svg", "/tail.svg"],
-    link: "https://unlinkedd.mksinha.info/",
+    link: "https://unlinkedd.mksinha.me/",
   },
   {
     id: 2,
@@ -105,7 +105,7 @@ export const projects = [
     des: "Interactive 3D portfolio experience built with React Three Fiber, showcasing projects in a gamified environment.",
     img: "/3d-portfolio.png",
     iconLists: ["/re.svg", "/three.svg", "/tail.svg"],
-    link: "https://portfolio.mksinha.info/",
+    link: "https://portfolio.mksinha.me/",
   },
   {
     id: 5,

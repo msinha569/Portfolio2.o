@@ -3,8 +3,12 @@ export const projectData = {
     title: "LinkedIn Clone - Professional Networking Platform",
     desc: "A full-featured LinkedIn clone built with the MERN stack, featuring advanced user authentication, real-time notifications, responsive design, and comprehensive profile management. Users can create posts, interact with content, manage their professional profiles, and receive email notifications for important activities.",
     img: "/linkedin-clone.png",
-    github: process.env.NEXT_PUBLIC_LINKEDIN_CLONE_REPO || "https://github.com/msinha569/linkedin-clone",
-    live: process.env.NEXT_PUBLIC_LINKEDIN_CLONE_URL || "https://unlinkedd.mksinha.info/",
+    github:
+      process.env.NEXT_PUBLIC_LINKEDIN_CLONE_REPO ||
+      "https://github.com/msinha569/linkedin-clone",
+    live:
+      process.env.NEXT_PUBLIC_LINKEDIN_CLONE_URL ||
+      "https://unlinkedd.mksinha.me/",
     techStack: [
       "React",
       "Node.js",
@@ -87,13 +91,17 @@ function PostFeed() {
   );
 }`,
   },
-  
+
   photozone: {
     title: "PhotoZone - AI-Powered Image Manipulation",
     desc: "An advanced image manipulation platform leveraging Cloudinary API for AI-powered features including generative fill, intelligent background removal, image restoration, and object manipulation. Built with Next.js for optimal performance and user experience.",
     img: "/photozone.png",
-    github: process.env.NEXT_PUBLIC_PHOTOZONE_REPO || "https://github.com/msinha569/photozone",
-    live: process.env.NEXT_PUBLIC_PHOTOZONE_URL || "https://your-photozone-link.com",
+    github:
+      process.env.NEXT_PUBLIC_PHOTOZONE_REPO ||
+      "https://github.com/msinha569/photozone",
+    live:
+      process.env.NEXT_PUBLIC_PHOTOZONE_URL ||
+      "https://your-photozone-link.com",
     techStack: [
       "Next.js",
       "TypeScript",
@@ -168,8 +176,12 @@ export default function ImageEditor() {
     title: "Shorts Generation - AI Video Creator",
     desc: "One-click AI-powered video generation platform that creates complete short-form videos. Integrates multiple AI services including Gemini for content generation, Assembly AI for transcription, Pexels for stock footage, ElevenLabs for voice synthesis, and Remotion for video rendering.",
     img: "/shorts-gen.png",
-    github: process.env.NEXT_PUBLIC_SHORTS_GEN_REPO || "https://github.com/msinha569/shorts-generation",
-    live: process.env.NEXT_PUBLIC_SHORTS_GEN_URL || "https://your-shorts-gen-link.com",
+    github:
+      process.env.NEXT_PUBLIC_SHORTS_GEN_REPO ||
+      "https://github.com/msinha569/shorts-generation",
+    live:
+      process.env.NEXT_PUBLIC_SHORTS_GEN_URL ||
+      "https://your-shorts-gen-link.com",
     techStack: [
       "Next.js",
       "TypeScript",
@@ -245,8 +257,12 @@ export default function VideoGenerator() {
     title: "3D Portfolio - Interactive Experience",
     desc: "An immersive 3D portfolio showcasing projects in a gamified, interactive environment. Built with React Three Fiber for stunning 3D graphics and smooth animations, providing visitors with a unique and memorable way to explore work and skills.",
     img: "/3d-portfolio.png",
-    github: process.env.NEXT_PUBLIC_3D_PORTFOLIO_REPO || "https://github.com/msinha569/3d-portfolio",
-    live: process.env.NEXT_PUBLIC_3D_PORTFOLIO_URL || "https://your-3d-portfolio-link.com",
+    github:
+      process.env.NEXT_PUBLIC_3D_PORTFOLIO_REPO ||
+      "https://github.com/msinha569/3d-portfolio",
+    live:
+      process.env.NEXT_PUBLIC_3D_PORTFOLIO_URL ||
+      "https://your-3d-portfolio-link.com",
     techStack: [
       "React",
       "React Three Fiber",
@@ -306,8 +322,12 @@ function ProjectShowcase() {
     title: "Anonymous Social Platform",
     desc: "A unique social media platform enabling anonymous posting and real-time chatting. Built with React and Firebase, providing secure authentication, real-time database synchronization, and cloud storage for media content.",
     img: "/social-media.png",
-    github: process.env.NEXT_PUBLIC_SOCIAL_MEDIA_REPO || "https://github.com/msinha569/social-media-app",
-    live: process.env.NEXT_PUBLIC_SOCIAL_MEDIA_URL || "https://your-social-media-link.com",
+    github:
+      process.env.NEXT_PUBLIC_SOCIAL_MEDIA_REPO ||
+      "https://github.com/msinha569/social-media-app",
+    live:
+      process.env.NEXT_PUBLIC_SOCIAL_MEDIA_URL ||
+      "https://your-social-media-link.com",
     techStack: [
       "React",
       "Firebase Authentication",
